@@ -8,8 +8,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  // 👇 IMPORTANT: base must be your repo name for production (GitHub Pages)
+
+  // ⬇️ Add this line (base must match your repo name)
   base: mode === "development" ? "/" : "/model_generator/",
+
   plugins: [
     react(),
     mode === "development" && componentTagger(),
